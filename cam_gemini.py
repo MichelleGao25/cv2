@@ -23,7 +23,7 @@ while(cap.isOpened()):
         img = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         img = Image.fromarray(img)      
         #img = Image.open('cam.jpg')
-        prompt = "照片中是什麼食物, 請簡單回答!"
+        prompt = "照片中是什麼回收物?"
         model = genai.GenerativeModel("gemini-1.5-flash")
 
         result = model.generate_content( [prompt , img] )
